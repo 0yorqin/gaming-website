@@ -8,6 +8,9 @@
 @font-face {
   font-family: "zentry";
   src: url("/fonts/zentry-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -37,19 +40,17 @@
   --font-robert-medium: "robert-medium", sans-serif;
   --font-robert-regular: "robert-regular", sans-serif;
 
-  --color-blue-50: #DFDFF0;
-  --color-blue-75: #DFDFF2;
-  --color-blue-100: #F0F2FA;
+  --color-blue-50: #dfdff0;
+  --color-blue-75: #dfdff2;
+  --color-blue-100: #f0f2fa;
   --color-blue-200: #010101;
-  --color-blue-300: #4FB7DD;
+  --color-blue-300: #4fb7dd;
 
-  --color-violet-300: #5724FF;
+  --color-violet-300: #5724ff;
 
-  --color-yellow-100: #8E983F;
-  --color-yellow-300: #EDFF66;
-
+  --color-yellow-100: #8e983f;
+  --color-yellow-300: #edff66;
 }
-
 
 body {
   background: #dfdff0;
@@ -59,6 +60,9 @@ body {
   width: 100dvw;
 }
 
+b {
+  @apply zentry-special;
+}
 
 @utility border-hsla {
   @apply border border-white/20;
@@ -74,7 +78,9 @@ body {
          bg-neutral-800 transition-transform duration-300 ease-[cubic-bezier(0.65_0.05_0.36_1)]
          dark:bg-white;
 }
-.nav-hover-btn:hover::after { @apply origin-bottom-left scale-x-100; }
+.nav-hover-btn:hover::after {
+  @apply origin-bottom-left scale-x-100;
+}
 
 @utility floating-nav {
   @apply bg-black rounded-lg border;
@@ -93,6 +99,10 @@ body {
 }
 
 @utility special-font {
+  @apply font-zentry;
+}
+
+@utility zentry-special {
   @apply font-zentry;
   font-feature-settings: "ss01" on;
 }
@@ -170,7 +180,6 @@ body {
 @utility contact-clip-path-2 {
   clip-path: polygon(29% 15%, 85% 30%, 50% 100%, 10% 64%);
 }
-
 
 .indicator-line {
   @apply h-1 w-px rounded-full bg-white transition-all duration-200 ease-in-out;

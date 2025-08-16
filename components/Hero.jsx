@@ -173,7 +173,7 @@ const Hero = () => {
               currentIndex === totalVideos - 1 ? 1 : currentIndex
             )}
             ref={backgroundVideoRef}
-            autoPlay
+            // autoPlay
             loop
             muted
             preload="auto"
@@ -183,13 +183,13 @@ const Hero = () => {
         </div>
 
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
-          G<b>a</b>ming
+          G<span className="zentry-special">a</span>ming
         </h1>
 
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
             <h1 className="special-font hero-heading text-blue-100">
-              Redefi<b>n</b>e
+              Redefi<span className="zentry-special">n</span>e
             </h1>
 
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
