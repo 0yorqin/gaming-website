@@ -173,7 +173,7 @@ const Hero = () => {
               currentIndex === totalVideos - 1 ? 1 : currentIndex
             )}
             ref={backgroundVideoRef}
-            // autoPlay
+            autoPlay
             loop
             muted
             preload="auto"
